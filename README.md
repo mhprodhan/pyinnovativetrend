@@ -11,13 +11,21 @@ The package is installed using pip:
 ## Function details:
 ### pyinnovativetrend.ITA_single
 <b>pyinnovativetrend.ITA_single(x, length, alpha = 0.05, graph={}) </b>
+
 <h3>pyinnovativetrend.ITA_multiple_by_station </h3> 
 <b>pyinnovativetrend.ITA_multiple_by_station (length, filename=[], column=[], exceptcolumn=[],graph={}, alpha =0.05, rnd=2, csv = False, directory_path = "./", output=[], out_direc="./") </b>
+
 <h3>pyinnovativetrend.ITA_multiple_by_column </h3>
 <b>pyinnovativetrend.ITA_multiple_by_column(length, filename=[], column=[], exceptcolumn=[],graph={}, alpha =0.05, rnd=2, csv = False, directory_path = "./", output=[], out_direc="./") </b>
+
 <h3>pyinnovativetrend.ITA_single_vis() </h3>
+<b>pyinnovativetrend.ITA_single_vis(x,length,figsize=(10,10),graph={}) </b>
+
 <h3>pyinnovativetrend.ITA_multiple_vis_by_station() </h3>
+<b>pyinnovativetrend.ITA_multiple_vis_by_station(length, graph={}, filename=[], column=[], exceptcolumn=[], csv = False, directory_path = "./")</b>
+
 <h3>pyinnovativetrend.ITA_multiple_vis_by_column() </h3>
+<b> pyinnovativetrend.ITA_multiple_vis_by_column(length, graph={}, filename=[], column=[], exceptcolumn=[], csv = False, directory_path = "./") </b>
 
 The function takes a list or numpy array and calculates trend using innovative trend analysis method. 
 <h4 style="background-color:powderblue;"> Parameters: </h4>
@@ -25,7 +33,28 @@ The function takes a list or numpy array and calculates trend using innovative t
 The time series or data series whose trend is to be determined
 
 <b> length : integer </b></br>
-Length of the time series. If given length of the time series is odd, the earliest/first entry will be ommitted. **
+Length of the time series. If given length of the time series is odd, the earliest/first entry will be ommitted.
+
+<b> filename : List default all excel/csv files</b></br>
+List of files or stations which contain the data sorted by month/year/season.
+
+<b> column : List default all columns </b></br>
+List of columns or data-series which contain the data.
+
+<b> exceptcolumn : List default empty list</b></br>
+List of columns for which analysis is not required (For example, column of year).
+
+<b> csv : bool default False </b></br>
+The type of files. By default the file type is excel. However, if the files are in csv format, csv should be assigned to True.
+
+<b> directory_path : string default root </b></br>
+Directory path of the files where the files are stored.
+
+<b> output : list default station names or column names</b></br>
+Name of the files by which the results will be saved.
+
+<b> out_direc : string default root </b></br>
+Directory path of the files where the results will be saved.
 
 <b> alpha : float default 0.05 </b></br>
 Level of significance in a two-tailed test.
@@ -41,4 +70,6 @@ Level of significance in a two-tailed test.
 'output_dir' : './'              # Directory of output file where graph is to be saved.</br>
 'output_name' : 'outputfig.png'  # Name of the graph or illustration.</br>
 'dpi' : 300                      # Dot per inch (dpi) of the graph or illustration.</br>
+'row' : -                        # Row number of the subplots. If not provided, will be calculated automatically. (Available only for multiple analysis) </br>
+'colm': -                        # column number of the subplots. If not provided, will be calculated automatically. (Available only for multiple analysis) </br>
 
