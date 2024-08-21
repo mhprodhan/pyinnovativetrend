@@ -10,8 +10,8 @@ The package is installed using pip:
 
 ## Function details:
 ### pyinnovativetrend.ITA_single(x, length, alpha = 0.05, graph={})
-### pyinnovativetrend.ITA_multiple_by_station ()
-### pyinnovativetrend.ITA_multiple_by_column ()
+### pyinnovativetrend.ITA_multiple_by_station (length, filename=[], column=[], exceptcolumn=[],graph={}, alpha =0.05, rnd=2, csv = False, directory_path = "./", output=[], out_direc="./")
+### pyinnovativetrend.ITA_multiple_by_column (length, filename=[], column=[], exceptcolumn=[],graph={}, alpha =0.05, rnd=2, csv = False, directory_path = "./", output=[], out_direc="./")
 ### pyinnovativetrend.ITA_single_vis()
 ### pyinnovativetrend.ITA_multiple_vis_by_station()
 ### pyinnovativetrend.ITA_multiple_vis_by_column()
