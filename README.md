@@ -18,7 +18,7 @@ Example:
     x = [1,2,3,4,5,6,2,3,5,2,3,4,4]
     graph ={
         'xlabel' : 'First sub-series (1980 - 1985)',
-        'ylabel' : 'Second sub-series (1986 - 1991),
+        'ylabel' : 'Second sub-series (1986 - 1991)',
         'title' : 'Time series analysis',
         'dpi' : 450
     }

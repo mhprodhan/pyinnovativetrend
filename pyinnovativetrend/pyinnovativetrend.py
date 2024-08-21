@@ -4,8 +4,8 @@ from math import sqrt
 from collections import namedtuple
 import os
 import pandas as pd
-from visualization import *
-from util  import *
+from .visualization import *
+from .util  import *
      
 
 
@@ -54,18 +54,9 @@ def ITA_single(x, length, alpha = 0.05, figsize=(10,10), graph={}):
     p_value, h, trend = z2p(s/ssd,alpha)
     
     res = namedtuple('ITA', ['trend', 'h', 'p', 'z', 'slope', 'standard_deviation', 'slope_standard_deviation','correlation','lower_critical_level','uper_critical_level'])
-    ITA_single_vis(x,length)
+    ITA_single_vis(x,length,graph = graph)
     return res (trend, h, p_value, s/ssd, s, sd, ssd, corr, lcl, ucl)
 
-x = [1,2,3,4,5,6,2,3,5,2,3,4,4]
-graph ={
-        'xlabel' : 'First sub-series (1980 - 1985)',
-        'ylabel' : 'Second sub-series (1986 - 1991)',
-        'title' : 'Time series analysis',
-        'dpi' : 450
-    }
-
-print(ITA_single(x, 12, graph = graph))
 
 def ITA_multiple_by_station(length, filename=[], column=[], exceptcolumn=[],graph={}, alpha =0.05, rnd=2, csv = False, directory_path = "./", output=[], out_direc="./"):
     
