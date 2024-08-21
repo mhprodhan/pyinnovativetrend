@@ -10,10 +10,24 @@ The package is installed using pip:
 
 ## Function details:
 ### pyinnovativetrend.ITA_single
-** pyinnovativetrend.ITA_single(x, length, alpha = 0.05, graph={}) **
+**pyinnovativetrend.ITA_single(x, length, alpha = 0.05, figsize=(10,10), graph={})**
 
-<h3>pyinnovativetrend.ITA_multiple_by_station </h3> 
-<b>pyinnovativetrend.ITA_multiple_by_station (length, filename=[], column=[], exceptcolumn=[],graph={}, alpha =0.05, rnd=2, csv = False, directory_path = "./", output=[], out_direc="./") </b>
+Example:
+
+    import pyinnovativetrend as pit
+    x = [1,2,3,4,5,6,2,3,5,2,3,4,4]
+    graph ={
+        'xlabel' : 'First sub-series (1980 - 1985)',
+        'ylabel' : 'Second sub-series (1986 - 1991),
+        'title' : 'Time series analysis',
+        'dpi' : 450
+    }
+
+    pit.ITA_single(x, 12, graph = graph)
+
+
+## pyinnovativetrend.ITA_multiple_by_station 
+**pyinnovativetrend.ITA_multiple_by_station (length, filename=[], column=[], exceptcolumn=[],graph={}, alpha =0.05, rnd=2, csv = False, directory_path = "./", output=[], out_direc="./")**
 
 <h3>pyinnovativetrend.ITA_multiple_by_column </h3>
 <b>pyinnovativetrend.ITA_multiple_by_column(length, filename=[], column=[], exceptcolumn=[],graph={}, alpha =0.05, rnd=2, csv = False, directory_path = "./", output=[], out_direc="./") </b>
