@@ -9,3 +9,22 @@ The package is installed using pip:
     pip install pyinnovativetrend
 
 ## Function details:
+### pyinnovativetrend.ITA_single(x, length, alpha = 0.05, graph={})
+### pyinnovativetrend.ITA_multiple_by_station ()
+### pyinnovativetrend.ITA_multiple_by_column ()
+### pyinnovativetrend.ITA_single_vis()
+### pyinnovativetrend.ITA_multiple_vis_by_station()
+### pyinnovativetrend.ITA_multiple_vis_by_column()
+
+The function takes a list or numpy array and calculates trend using innovative trend analysis method. 
+<h4 style="background-color:powderblue;"> Parameters: </h4>
+** x : List or numpy array **
+The time series or data series whose trend is to be determined
+
+** length : integer **
+Length of the time series. If given length of the time series is odd, the earliest/first entry will be ommitted. **
+
+** alpha : float default 0.05 **
+Level of significance in a two-tailed test.
+
+** graph : python dictionary,  **
