@@ -10,7 +10,7 @@ The package is installed using pip:
 
 ## Function details:
 ### pyinnovativetrend.ITA_single
-<b>pyinnovativetrend.ITA_single(x, length, alpha = 0.05, graph={}) </b>
+** pyinnovativetrend.ITA_single(x, length, alpha = 0.05, graph={}) **
 
 <h3>pyinnovativetrend.ITA_multiple_by_station </h3> 
 <b>pyinnovativetrend.ITA_multiple_by_station (length, filename=[], column=[], exceptcolumn=[],graph={}, alpha =0.05, rnd=2, csv = False, directory_path = "./", output=[], out_direc="./") </b>
