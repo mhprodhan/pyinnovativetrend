@@ -9,12 +9,15 @@ The package is installed using pip:
     pip install pyinnovativetrend
 
 ## Function details:
-### pyinnovativetrend.ITA_single(x, length, alpha = 0.05, graph={})
-### pyinnovativetrend.ITA_multiple_by_station (length, filename=[], column=[], exceptcolumn=[],graph={}, alpha =0.05, rnd=2, csv = False, directory_path = "./", output=[], out_direc="./")
-### pyinnovativetrend.ITA_multiple_by_column (length, filename=[], column=[], exceptcolumn=[],graph={}, alpha =0.05, rnd=2, csv = False, directory_path = "./", output=[], out_direc="./")
-### pyinnovativetrend.ITA_single_vis()
-### pyinnovativetrend.ITA_multiple_vis_by_station()
-### pyinnovativetrend.ITA_multiple_vis_by_column()
+### pyinnovativetrend.ITA_single
+<b>pyinnovativetrend.ITA_single(x, length, alpha = 0.05, graph={}) </b>
+<h3>pyinnovativetrend.ITA_multiple_by_station </h3> 
+<b>pyinnovativetrend.ITA_multiple_by_station (length, filename=[], column=[], exceptcolumn=[],graph={}, alpha =0.05, rnd=2, csv = False, directory_path = "./", output=[], out_direc="./") </b>
+<h3>pyinnovativetrend.ITA_multiple_by_column </h3>
+<b>pyinnovativetrend.ITA_multiple_by_column(length, filename=[], column=[], exceptcolumn=[],graph={}, alpha =0.05, rnd=2, csv = False, directory_path = "./", output=[], out_direc="./") </b>
+<h3>pyinnovativetrend.ITA_single_vis() </h3>
+<h3>pyinnovativetrend.ITA_multiple_vis_by_station() </h3>
+<h3>pyinnovativetrend.ITA_multiple_vis_by_column() </h3>
 
 The function takes a list or numpy array and calculates trend using innovative trend analysis method. 
 <h4 style="background-color:powderblue;"> Parameters: </h4>
