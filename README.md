@@ -26,6 +26,11 @@ Example:
     pit.ITA_single(x, 12, graph = graph)
 
 
+Output:
+ITA(trend='No trend', h=False, p=0.2049477839420626, z=-1.2675805428826508, slope=-0.027777777777777752, standard_deviation=1.2555432644432805, slope_standard_deviation=0.021914014011770254, correlation=0.9341987329938274, lower_critical_level=-0.0429506782197758, uper_critical_level=0.0429506782197758)
+
+![Single trend analysis](/outputfig.png)
+
 ## pyinnovativetrend.ITA_multiple_by_station 
 **pyinnovativetrend.ITA_multiple_by_station (length, filename=[], column=[], exceptcolumn=[],graph={}, alpha =0.05, rnd=2, csv = False, directory_path = "./", output=[], out_direc="./")**
 

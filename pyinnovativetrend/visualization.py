@@ -3,7 +3,7 @@ import  os
 from math import floor,ceil
 import pandas as pd
 import matplotlib.pyplot as plt
-from .util import *
+from util import *
 
 def ITA_single_vis(x,length,figsize=(10,10),graph={}):
     x, length = preprocessing(x,length)
