@@ -18,13 +18,23 @@ The package is installed using pip:
 
 The function takes a list or numpy array and calculates trend using innovative trend analysis method. 
 <h4 style="background-color:powderblue;"> Parameters: </h4>
-** x : List or numpy array **
+<b> x : List or numpy array </b>
 The time series or data series whose trend is to be determined
 
-** length : integer **
+<b> length : integer </b>
 Length of the time series. If given length of the time series is odd, the earliest/first entry will be ommitted. **
 
-** alpha : float default 0.05 **
+<b> alpha : float default 0.05 </b>
 Level of significance in a two-tailed test.
 
-** graph : python dictionary,  **
+<b> graph : python dictionary (optional) </b>
+<i>Default values </i>
+'trendLineStyle' : 'dashed'      # Line style of trend line, for more line style type visit documentation of matplotlib.
+'scatterMarker' : '.'            # Marker type of scattered data points, for more marker visit documentation of matplotlib
+'title' : ''                     # Title of the graph or illustration.
+'xlabel' : 'First sub-series'    # Label of X-axis
+'ylabel' : 'Second sub-series'   # Label of Y-axis
+'noTrendLineStyle' : 'solid'     # Line style of no trend line or 1:1 line, for more line style type visit documentation of matplotlib.
+'output_dir' : './'              # Directory of output file where graph is to be saved.
+'output_name' : 'outputfig.png'  # Name of the graph or illustration.
+'dpi' : 300                      # Dot per inch (dpi) of the graph or illustration.
