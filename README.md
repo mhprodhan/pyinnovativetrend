@@ -51,7 +51,7 @@ Example:
 
 Output:\
 Excel files sample
-![Single trend analysis](/Barisalexcel.png)
+![Single trend analysis](/barisalExcel.png)
 Figure Sample
 ![Single trend analysis](/Barisal.png)
 ## pyinnovativetrend.ITA_multiple_by_column
@@ -140,7 +140,7 @@ Example:
 
 Output:
 
-![Single trend analysis](/Post-monsoon.png)
+![Single trend analysis](/Post-Monsoon.png)
 
 The function takes a list or numpy array and calculates trend using innovative trend analysis method. 
 ### Parameters:
@@ -179,15 +179,15 @@ Choose if graph is to be illustrated along with calculation in single analysis.
 
 **graph : python dictionary (optional)**
 **Default values**
-'trendLineStyle' : 'dashed'      # Line style of trend line, for more line style type visit documentation of matplotlib/
-'scatterMarker' : '.'            # Marker type of scattered data points, for more marker visit documentation of matplotlib/
-'title' : ''                     # Title of the graph or illustration/
-'xlabel' : 'First sub-series'    # Label of X-axis/
-'ylabel' : 'Second sub-series'   # Label of Y-axis/
-'noTrendLineStyle' : 'solid'     # Line style of no trend line or 1:1 line, for more line style type visit documentation of matplotlib/
-'output_dir' : './'              # Directory of output file where graph is to be saved/
-'output_name' : 'outputfig.png'  # Name of the graph or illustration/
-'dpi' : 300                      # Dot per inch (dpi) of the graph or illustration/
-'row' : -                        # Row number of the subplots. If not provided, will be calculated automatically. (Available only for multiple analysis)/
-'colm': -                        # column number of the subplots. If not provided, will be calculated automatically. (Available only for multiple analysis)/
+'trendLineStyle' : 'dashed'      # Line style of trend line, for more line style type visit documentation of matplotlib\
+'scatterMarker' : '.'            # Marker type of scattered data points, for more marker visit documentation of matplotlib\
+'title' : ''                     # Title of the graph or illustration\
+'xlabel' : 'First sub-series'    # Label of X-axis\
+'ylabel' : 'Second sub-series'   # Label of Y-axis\
+'noTrendLineStyle' : 'solid'     # Line style of no trend line or 1:1 line, for more line style type visit documentation of matplotlib\
+'output_dir' : './'              # Directory of output file where graph is to be saved\
+'output_name' : 'outputfig.png'  # Name of the graph or illustration\
+'dpi' : 300                      # Dot per inch (dpi) of the graph or illustration\
+'row' : -                        # Row number of the subplots. If not provided, will be calculated automatically. (Available only for multiple analysis)\
+'colm': -                        # column number of the subplots. If not provided, will be calculated automatically. (Available only for multiple analysis)\
 
