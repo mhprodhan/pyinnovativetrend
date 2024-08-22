@@ -1,3 +1,18 @@
+Metadata-Version: 2.1
+Name: pyinnovativetrend
+Version: 1.0
+Summary: An innovative trend analysis and visualization tool
+Author: Md Mehedi Hasan Prodhan
+Author-email: mehediprodhan1613@outlook.com
+Keywords: time series analysis,trend analysis,innovative trend,trend,ITA,ita
+Requires-Python: >=3.7, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+
 # pyinnovativetrend
 
 Trend analysis is a statistical technique used to examine data over time to identify patterns, trends, or movements in a particular direction. It is widely used in various fields such as finance, economics, marketing, environmental science, and many others. A very common and conventional method to detect trend is mann-kendall trend test proposed by Mann and Kendall. However, an innovative method, proposed by Sen (2012), is widely used now-a-days due to its simplicity and graphical features. This innovative trend analysis method is very sensitive and can detect trends that are overlooked by conventional methods like MK test.

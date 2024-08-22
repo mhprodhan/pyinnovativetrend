@@ -9,7 +9,7 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="pyinnovativetrend",
-    version="0.2",
+    version="1.0",
     packages=find_packages(),
     description="An innovative trend analysis and visualization tool",
     long_description=long_description,

@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.py
+pyinnovativetrend/__init__.py
+pyinnovativetrend/pyinnovativetrend.py
+pyinnovativetrend/util.py
+pyinnovativetrend/visualization.py
+pyinnovativetrend.egg-info/PKG-INFO
+pyinnovativetrend.egg-info/SOURCES.txt
+pyinnovativetrend.egg-info/dependency_links.txt
+pyinnovativetrend.egg-info/requires.txt
+pyinnovativetrend.egg-info/top_level.txt
