@@ -3,9 +3,9 @@ import  os
 from math import floor,ceil
 import pandas as pd
 import matplotlib.pyplot as plt
-from .util import *
+from util import *
 
-def ITA_single_vis(x,length,figsize=(10,10),graph={}):
+def ITA_single_vis(x,length,graph={}):
     x, length = preprocessing(x,length)
     fh,sh=np.array(x[:length//2]),np.array(x[length//2:])
     fh.sort()
@@ -29,12 +29,12 @@ def ITA_single_vis(x,length,figsize=(10,10),graph={}):
         y2=maximum
         x2=maximum-M+m
     
-    plt.figure(figsize=figsize)
+    plt.figure(figsize=graph.get('figsize',(5,5)))
     plt.plot([x1,x2],[y1,y2], linestyle=graph.get("trendLineStyle","dashed"))
     plt.scatter(fh,sh,marker=graph.get('scatterMarker','.'))
     plt.title(graph.get('title',""))
-    plt.xlabel(graph.get('xlabel',"First sub-series"),fontsize=graph.get('fontsize',(figsize[0]*figsize[1])**0.5))
-    plt.ylabel(graph.get('ylabel',"Second sub-series"),fontsize=graph.get('fontsize',(figsize[0]*figsize[1])**0.5))
+    plt.xlabel(graph.get('xlabel',"First sub-series"),fontsize=graph.get('fontsize',(graph.get('figsize',(5,5))[0]*graph.get('figsize',(5,5))[1])**0.5))
+    plt.ylabel(graph.get('ylabel',"Second sub-series"),fontsize=graph.get('fontsize',(graph.get('figsize',(5,5))[0]*graph.get('figsize',(5,5))[1])**0.5))
     plt.plot(a,a,linestyle=graph.get('noTrendLineStyle','solid'))
     plt.tight_layout()
     plt.savefig(graph.get('output_dir','./')+graph.get('output_name','outputfig.png'),dpi=graph.get('dpi',300))

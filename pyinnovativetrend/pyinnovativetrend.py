@@ -4,12 +4,12 @@ from math import sqrt
 from collections import namedtuple
 import os
 import pandas as pd
-from .visualization import *
-from .util  import *
+from visualization import *
+from util  import *
      
 
 
-def ITA_single(x, length, alpha = 0.05, figsize=(10,10), graph={}):
+def ITA_single(x, length, alpha = 0.05, graph={}, showgraph = True):
     """
     This method, proposed by Sen (2012), is used to estimate the magnitude of the trend. 
     Input:
@@ -54,7 +54,8 @@ def ITA_single(x, length, alpha = 0.05, figsize=(10,10), graph={}):
     p_value, h, trend = z2p(s/ssd,alpha)
     
     res = namedtuple('ITA', ['trend', 'h', 'p', 'z', 'slope', 'standard_deviation', 'slope_standard_deviation','correlation','lower_critical_level','uper_critical_level'])
-    ITA_single_vis(x,length,graph = graph)
+    if showgraph:
+        ITA_single_vis(x, length, graph = graph)
     return res (trend, h, p_value, s/ssd, s, sd, ssd, corr, lcl, ucl)
 
 
@@ -138,13 +139,13 @@ def ITA_multiple_by_station(length, filename=[], column=[], exceptcolumn=[],grap
         
             else:
                 x = list(pd.read_excel(directory_path+file)[col])
-              
-            t, h, p, z, s, sd, ssd, corr, lcl, ucl = ITA_single(x,length,alpha)
+            
+            t, h, p, z, s, sd, ssd, corr, lcl, ucl = ITA_single(x,length,alpha, showgraph = False)
             p, z, s, sd, ssd, corr, lcl, ucl = round(p,3), round(z,rnd), round(s,rnd), round(sd,rnd), round(ssd,rnd), round(corr,rnd), round(lcl,rnd), round(ucl,rnd)
             masterdict["Trend"].append(t); masterdict["h"].append(h); masterdict["P-value"].append(p); masterdict["Z score"].append(z); masterdict["Slope"].append(s); masterdict["Standard Deviation"].append(sd)
             masterdict["Slope Standard Deviation"].append(ssd); masterdict["Correlation"].append(corr); masterdict["Lower Critical Limit"].append(lcl); masterdict["Upper Critical Limit"].append(ucl)
-        
         pd.DataFrame(masterdict).to_excel(out_direc+output[count], index=False)
+        
         count += 1
     ITA_multiple_vis_by_station(length, graph=graph,directory_path=directory_path,csv=csv,filename=filename,column=column,exceptcolumn=exceptcolumn)
 
@@ -236,7 +237,7 @@ def ITA_multiple_by_column(length, filename=[], column=[], exceptcolumn=[],graph
             else:
                 x = list(pd.read_excel(directory_path + file)[col])
               
-            t, h, p, z, s, sd, ssd, corr, lcl, ucl = ITA_single(x,length,alpha)
+            t, h, p, z, s, sd, ssd, corr, lcl, ucl = ITA_single(x,length,alpha, showgraph=False)
             p, z, s, sd, ssd, corr, lcl, ucl = round(p,3), round(z,rnd), round(s,rnd), round(sd,rnd), round(ssd,rnd), round(corr,rnd), round(lcl,rnd), round(ucl,rnd)
             masterdict["Trend"].append(t); masterdict["h"].append(h); masterdict["P-value"].append(p); masterdict["Z score"].append(z); masterdict["Slope"].append(s); masterdict["Standard Deviation"].append(sd)
             masterdict["Slope Standard Deviation"].append(ssd); masterdict["Correlation"].append(corr); masterdict["Lower Critical Limit"].append(lcl); masterdict["Upper Critical Limit"].append(ucl)
@@ -247,3 +248,13 @@ def ITA_multiple_by_column(length, filename=[], column=[], exceptcolumn=[],graph
 
     
 # ITA_multiple_vis_by_column(38,exceptcolumn=['Year'], directory_path="./Input/", graph={'fontsize':15})
+
+graph ={
+    'xlabel' : 'First sub-series (1985 - 2003)',
+    'ylabel' : 'Second sub-series (2004 - 2022)',
+    'title' : 'Time series analysis',
+    'dpi' : 450,
+    'fontsize' : 10
+}
+
+ITA_multiple_by_column(38,filename=['Sylhet.xlsx','Comilla.xlsx','Dhaka.xlsx'], exceptcolumn=['Year'], directory_path="C:\\Users\\User\\Desktop\\Station\\with seasonal\\", graph = graph)
